@@ -1,0 +1,26 @@
+header{
+	background-color:black; 
+	height:80px;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
+header h2{
+	color:white;
+}
+
+.lesdiv{
+	background-color: lightgrey; 
+}
+.flex{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: lightgrey; 
+	border: 2px solid black;
+}
+
+footer{
+	background-color: lightgrey; 
+	border: 2px solid black;
+}
