@@ -3,26 +3,46 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="style.css" rel="stylesheet" type="text/css">
+		<script>
+			function afficheVille() {
+				let choixVille = document.getElementById("choixVille").value;
+				
+				let villes = document.getElementsByClassName("Ville");
+				
+				for (let i = 0; i < villes.length; i++) {
+					if (villes[i].id === choixVille) {
+						villes[i].style.display = "block";
+					} else {
+						villes[i].style.display = "none";
+					}
+				}
+			}
+		</script> 	
 	</head>
-	<body>
+	<body onload="afficheVille()">
 		<header>
 			<h2>TD n°1 Programmation web - Application météo #rpzToobo</h2>
 		</header>
+		<select id="choixVille" onchange="afficheVille()">
+			<option value="Niort">Niort</option>
+			<option value="Rio">Rio de Janeiro</option>
+			<option value="Reykjavik">Reykjavik</option>
+		</select>
 		<div class="flex">
-			<div class="lesdiv">
+			<div class="Ville" id="Niort">
 				<h2>Niort</h2>
 				<p>12°, pluvieux</p>
-				<img src="pluvieux.png" width="5%"/>
+				<img src="pluvieux.png" width="50%"/>
 			</div>
-			<div class="lesdiv">
+			<div class="Ville" id="Rio">
 				<h2>Rio de Janeiro</h2>
 				<p>29°, orageux</p>
-				<img src="orageux.png" width="5%"/>
+				<img src="orageux.png" width="50%"/>
 			</div>
-			<div class="lesdiv">
+			<div class="Ville" id="Reykjavik">
 				<h2>Reykjavik</h2>
 				<p>-10°, ensoleillé</p>
-				<img src="ensoleille.png" width="5%"/>
+				<img src="ensoleille.png" width="50%"/>
 			</div>
 		</div>
 		<footer>
