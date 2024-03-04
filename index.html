@@ -1,53 +1,48 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<script>
-			function afficheVille() {
-				let choixVille = document.getElementById("choixVille").value;
-				
-				let villes = document.getElementsByClassName("Ville");
-				
-				for (let i = 0; i < villes.length; i++) {
-					if (villes[i].id === choixVille) {
-						villes[i].style.display = "block";
-					} else {
-						villes[i].style.display = "none";
-					}
-				}
-			}
-		</script> 	
+	  <meta charset="UTF-8">
+	  <link rel="stylesheet" href="./td1.css" />
+	  <script src="./td1.js"> </script>
+		
 	</head>
-	<body onload="afficheVille()">
+	<body onLoad="afficheVille()">
 		<header>
-			<h2>TD n°1 Programmation web - Application météo #rpzToobo</h2>
+			<br/>
+			<h2>TD n°1 Programmation web – Application météo </h2>
+			<br/>
 		</header>
-		<select id="choixVille" onchange="afficheVille()">
-			<option value="Niort">Niort</option>
-			<option value="Rio">Rio de Janeiro</option>
-			<option value="Reykjavik">Reykjavik</option>
-		</select>
+		<p> Choisir une ville : 
+			<select id="choixVille" onChange="afficheVille()">
+				<option value="Alger">Alger</option>
+				<option value="Bastia">Bastia</option>
+				<option value="Johannesburg">Johannesburg</option>
+				<option value="Melbourne">Melbourne</option>
+				<option value="Niort">Niort</option>
+				<option value="Pekin">Pekin</option>
+				<option value="Reykjavik">Reykjavik</option>
+				<option value="Rio">Rio de Janeiro</option>
+				<option value="Rome">Rome</option>
+				<option value="Tahiti">Tahiti</option>
+			</select>
+		</p>
 		<div class="flex">
-			<div class="Ville" id="Niort">
-				<h2>Niort</h2>
-				<p>12°, pluvieux</p>
-				<img src="pluvieux.png" width="50%"/>
-			</div>
-			<div class="Ville" id="Rio">
-				<h2>Rio de Janeiro</h2>
-				<p>29°, orageux</p>
-				<img src="orageux.png" width="50%"/>
-			</div>
-			<div class="Ville" id="Reykjavik">
-				<h2>Reykjavik</h2>
-				<p>-10°, ensoleillé</p>
-				<img src="ensoleille.png" width="50%"/>
-			</div>
+			<div class="ville cadre" id="Alger"></div>
+			<div class="ville cadre" id="Bastia"></div>
+			<div class="ville cadre" id="Johannesburg"></div>
+			<div class="ville cadre" id="Melbourne"></div>
+			<div class="ville cadre" id="Niort"></div>
+			<div class="ville cadre" id="Pekin"></div>
+			<div class="ville cadre" id="Reykjavik" ></div>
+			<div class="ville cadre" id="Rio" ></div>
+			<div class="ville cadre" id="Rome" ></div>
+			<div class="ville cadre" id="Tahiti" ></div>
 		</div>
+
 		<footer>
-			<p>Charles D. Guyenot</p>
-			<p>Petite ref aux créateurs des icônes : <a href="https://thenounproject.com/">The Noon Project</a></p>
+			<p>François Garnier</p>
+			<p>BUT <a href="https://iutp.univ-poitiers.fr/sd/">SD Niort </a></p>
 		</footer>
 	</body>
 </html>
